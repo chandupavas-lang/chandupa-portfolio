@@ -1447,3 +1447,33 @@ a.ci-value:hover { color: var(--purple-bright); }
   box-shadow: 0 4px 20px var(--purple-glow);
   transform: translateY(-3px);
 }
+/* ── AOS CUSTOM ANIMATIONS ───────────────────────────── */
+[data-aos="fade-up"] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+[data-aos="fade-up"].aos-animate,
+[data-aos="fade-right"].aos-animate,
+[data-aos="fade-left"].aos-animate {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+[data-aos="fade-right"] {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+[data-aos="fade-left"] {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+[data-aos-delay="100"] { transition-delay: 0.1s; }
+[data-aos-delay="150"] { transition-delay: 0.15s; }
+[data-aos-delay="200"] { transition-delay: 0.2s; }
+[data-aos-delay="300"] { transition-delay: 0.3s; }
