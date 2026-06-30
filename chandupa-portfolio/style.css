@@ -649,3 +649,155 @@ ul{
   color: var(--text-muted);
   line-height: 1.6;
 }
+/* ── SKILLS ──────────────────────────────────────────── */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+.skill-group {
+  padding: 2rem;
+}
+
+.skill-group-title {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--purple-bright);
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Skill bars */
+.skill-item { margin-bottom: 1.5rem; }
+
+.skill-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.skill-meta span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.skill-meta i { color: var(--purple); font-size: 1rem; }
+.skill-pct { font-family: var(--font-mono); font-size: 0.78rem; color: var(--purple-bright); }
+
+.skill-bar {
+  height: 5px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--purple-deep) 0%, var(--purple-bright) 100%);
+  border-radius: 100px;
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 10px var(--purple-glow);
+  position: relative;
+}
+
+.skill-fill::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--purple-bright);
+  box-shadow: 0 0 8px var(--purple-bright);
+}
+
+/* Tool chips */
+.tools-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.tool-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 1rem;
+  background: rgba(157,78,221,0.06);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 0.8rem;
+  color: var(--text);
+  text-align: center;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.tool-chip i {
+  font-size: 1.5rem;
+  color: var(--purple-bright);
+  font-style: normal;
+}
+
+.tool-chip .tool-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, var(--purple-glow), transparent 70%);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.tool-chip:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-3px);
+}
+
+.tool-chip:hover .tool-glow { opacity: 1; }
+
+/* Soft skills */
+.soft-skills { display: flex; flex-direction: column; gap: 1.25rem; }
+
+.soft-skill {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.soft-icon {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: var(--purple-subtle);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--purple-bright);
+  font-size: 0.9rem;
+}
+
+.soft-skill strong {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.soft-skill p { font-size: 0.8rem; color: var(--text-muted); }
