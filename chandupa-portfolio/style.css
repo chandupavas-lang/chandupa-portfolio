@@ -934,3 +934,93 @@ ul{
   font-size: 0.72rem;
   color: var(--text-muted);
 }
+/* ── EXPERIENCE ──────────────────────────────────────── */
+.exp-wrapper { max-width: 800px; margin: 4rem auto 0; }
+
+.exp-card { padding: 2.5rem; }
+
+.exp-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.exp-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: var(--purple-subtle);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--purple-bright);
+  flex-shrink: 0;
+}
+
+.exp-meta { flex: 1; }
+
+.exp-meta h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.25rem; }
+
+.exp-company {
+  color: var(--purple-bright);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+
+.exp-duration {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.exp-badge {
+  padding: 0.3rem 0.85rem;
+  background: rgba(250, 204, 21, 0.1);
+  color: #FACC15;
+  border: 1px solid rgba(250, 204, 21, 0.3);
+  border-radius: 100px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.exp-divider {
+  height: 1px;
+  background: var(--border);
+  margin-bottom: 1.5rem;
+}
+
+.exp-body p {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.exp-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.highlight-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.9rem;
+  background: var(--purple-subtle);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.highlight-item i { color: var(--purple); font-size: 0.85rem; }
